@@ -1,0 +1,34 @@
+ float input_AST=20F;float input_ALT=25F;float input_Bilirubin=1F;
+    float input_ALP=10F;float input_Albumin=4F;float input_GGT=10F;
+    float ratio_AST_ALT=input_AST/input_ALT;
+    float ratio_ALT_AST=input_ALT/input_AST;
+    if((input_AST>=10 && input_AST<=40) && (input_ALT>=5 && input_ALT<=35) &&(input_Bilirubin>=0.3 && input_Bilirubin<=1.2) && (input_ALP>=10 && input_ALP<=35) && (input_Albumin>=3.5 &&input_Albumin<=5.7)&& (input_GGT>=5 && input_GGT<=42)){
+        Console.WriteLine("Normal");
+    }
+    else if(ratio_ALT_AST>=1 &&(input_AST>=40) && (input_ALT>=35) &&(input_Bilirubin>=0.5 && input_Bilirubin<=1.7) && (input_ALP>=10 && input_ALP<=35) && (input_Albumin>=3.5 &&input_Albumin<=5.7)&& (input_GGT>=5 && input_GGT<=42)){
+        Console.WriteLine("Acute Liver Damage");
+    }
+    else if(ratio_AST_ALT<=1 &&(input_AST>=40) && (input_ALT>=35) &&(input_Bilirubin>=0.5 && input_Bilirubin<=1.6) && (input_ALP>=10 && input_ALP<=35) && (input_Albumin>=3.5 &&input_Albumin<=5.7)&& (input_GGT>=5 && input_GGT<=42)){
+        Console.WriteLine("Achronic Form of liver damage");
+    }
+     else if(ratio_AST_ALT>=2 &&(input_AST>=40) && (input_ALT>=35) &&(input_Bilirubin>=0.5 && input_Bilirubin<=1.6) && (input_ALP>=10 && input_ALP<=35) && (input_Albumin>=3.5 &&input_Albumin<=5.7)&& (input_GGT>=5 && input_GGT<=42)){
+        Console.WriteLine("Alcoholic Hapatitis");
+    }
+     else if((ratio_AST_ALT<=2 && ratio_AST_ALT>=1)&&(input_AST>=40) && (input_ALT>=35) &&(input_Bilirubin>=0.5 && input_Bilirubin<=1.6) && (input_ALP>=10 && input_ALP<=35) && (input_Albumin>=3.5 &&input_Albumin<=5.7)&& (input_GGT>=5 && input_GGT<=42)){
+        Console.WriteLine("Cirrhosis");
+    }
+     else if((input_AST>=10 && input_AST<=40) && (input_ALT>=5 &&input_ALT<=35) &&(input_Bilirubin>=0.5 && input_Bilirubin<=1.6) && (input_ALP>=40 && input_ALP<=120) && (input_Albumin>=3.5 && input_Albumin<=5.7) && (input_GGT>=5 && input_GGT<=42)){
+        Console.WriteLine("Bile duct obstruction");
+    }
+      else if((input_AST>=10 && input_AST<=50) && (input_ALT>=5 &&input_ALT<=45) &&(input_Bilirubin>=0.5 && input_Bilirubin<=1.6) && (input_ALP>=150) && (input_Albumin>=3.5 && input_Albumin<=5.7) && (input_GGT>=5 && input_GGT<=42)){
+        Console.WriteLine("Cancer");
+    }
+     else if(ratio_ALT_AST>=1 && (input_AST>=40 && input_AST<=60) && (input_ALT>=35 &&input_ALT<=55) &&(input_Bilirubin>=0.5 && input_Bilirubin<=1.6) && (input_ALP>=10 && input_ALP<=35) && (input_Albumin<=3.5) && (input_GGT>=5 && input_GGT<=42)){
+        Console.WriteLine("Autoimmune");
+    }
+    else if(input_GGT>65){
+        Console.WriteLine("Cirrhosis");
+    }
+    else{
+         Console.WriteLine("Error");
+    }
